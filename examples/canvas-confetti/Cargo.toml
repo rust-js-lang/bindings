@@ -1,0 +1,14 @@
+# The example, as an app has it: the binding and the crates it uses, each by
+# version, which `rust-js-patch` tells Cargo are in node_modules.
+[package]
+name = "example"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+canvas_confetti = { package = "rust-js-bindings-canvas-confetti", version = "~1.9.0" }
+js = { package = "rust-js-builtins", version = "~0.0.1" }
+webapi = { package = "rust-js-webapi", version = "~0.0.2" }
+
+[workspace]

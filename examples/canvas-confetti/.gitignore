@@ -1,0 +1,7 @@
+node_modules
+dist
+target
+.cargo
+Cargo.lock
+src/*.js
+src/*.js.map

@@ -1,0 +1,13 @@
+{
+  "name": "rust-js-bindings",
+  "private": true,
+  "type": "module",
+  "description": "Bindings to JS libraries for rust-js, which the community keeps: each a crate in an npm package, @rust-js-bindings/<library>.",
+  "scripts": {
+    "test": "bun scripts/install-examples.ts && bun test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "vite": "8.3.0"
+  }
+}

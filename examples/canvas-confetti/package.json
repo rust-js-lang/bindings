@@ -1,0 +1,24 @@
+{
+  "name": "example-canvas-confetti",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "rust-js-patch",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@rust-js-bindings/canvas-confetti": "file:../../bindings/canvas-confetti",
+    "@rust-js/builtins": "0.0.1",
+    "@rust-js/runtime": "0.0.1",
+    "@rust-js/webapi": "0.0.2",
+    "canvas-confetti": "1.9.4"
+  },
+  "devDependencies": {
+    "@rust-js/build": "0.0.1",
+    "@rust-js/native": "0.0.1",
+    "@rust-js/resources": "0.0.1",
+    "@rust-js/vite-plugin": "0.0.1",
+    "vite": "^8.3.0"
+  }
+}

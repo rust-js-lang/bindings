@@ -1,0 +1,26 @@
+{
+  "name": "@rust-js-bindings/canvas-confetti",
+  "version": "1.9.0",
+  "description": "canvas-confetti, for rust-js: confetti on a page, from Rust",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rust-js-lang/bindings.git",
+    "directory": "bindings/canvas-confetti"
+  },
+  "keywords": ["rust-js", "rust", "bindings", "canvas-confetti", "confetti"],
+  "rust-js": {
+    "crate": "rust-js-bindings-canvas-confetti"
+  },
+  "owners": [
+    {
+      "githubUsername": "nguyenyou"
+    }
+  ],
+  "peerDependencies": {
+    "canvas-confetti": ">=1.9.0 <1.10.0",
+    "@rust-js/builtins": "~0.0.1",
+    "@rust-js/webapi": "~0.0.2"
+  },
+  "files": ["Cargo.toml", "src", "README.md"]
+}

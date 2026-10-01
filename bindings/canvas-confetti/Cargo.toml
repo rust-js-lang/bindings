@@ -1,0 +1,23 @@
+# canvas-confetti 1.9, for rust-js. Its version is the library's major and
+# minor, and a patch of its own. The crates it uses are named by version: an
+# app's `rust-js-patch` tells Cargo where they're installed.
+[package]
+name = "rust-js-bindings-canvas-confetti"
+version = "1.9.0"
+edition = "2024"
+description = "canvas-confetti, for rust-js: confetti on a page, from Rust"
+license = "MIT"
+repository = "https://github.com/rust-js-lang/bindings"
+readme = "README.md"
+include = ["src", "README.md"]
+
+[lib]
+name = "canvas_confetti"
+
+[dependencies]
+js = { package = "rust-js-builtins", version = "~0.0.1" }
+webapi = { package = "rust-js-webapi", version = "~0.0.2" }
+
+# rust-js compiles with `--cfg=rust_js`: a `cfg` Cargo checks for.
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(rust_js)"] }
