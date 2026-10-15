@@ -18,6 +18,11 @@ name = "canvas_confetti"
 js = { package = "rust-js-builtins", version = "~0.0.1" }
 webapi = { package = "rust-js-webapi", version = "~0.0.2" }
 
+# A binding: what it binds is canvas-confetti's own JS, so rustc checks it
+# and rust-js reads its metadata; it has no JS to compile (rust-js's ADR 0414).
+[package.metadata.rust-js]
+bindings = true
+
 # rust-js compiles with `--cfg=rust_js`: a `cfg` Cargo checks for.
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ["cfg(rust_js)"] }

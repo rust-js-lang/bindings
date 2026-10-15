@@ -41,7 +41,10 @@ written by hand, by a person or a coding agent. Nothing generates it.
   library, `@rust-js/builtins` and `@rust-js/webapi` are `peerDependencies`.
   `owners` are the people who review its changes.
 - `Cargo.toml`: the crate, `rust-js-bindings-<library>`, at the same version.
-  It names the crates it uses by version only, never by path.
+  It names the crates it uses by version only, never by path, and says it's
+  a binding, `bindings = true` in `[package.metadata.rust-js]`: what it binds
+  is the library's own JS, so rustc checks it and rust-js reads it, where a
+  library's crate is compiled to JS (rust-js's ADR 0414).
 
 ## The example and its test
 
